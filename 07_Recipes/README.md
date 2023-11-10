@@ -22,3 +22,6 @@ Orden
 6. controladores
 7. servicios
 8. rutas
+
+#DB Diagram:
+https://dbdiagram.io/d/Recipes-654b0c8a7d8bbd6465b8fb17
