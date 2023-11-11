@@ -41,7 +41,7 @@ const Recipes = db.define('recipes', {
             model: Users
         }
     },
-    category: {
+    categoryId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         field: 'category_id',
@@ -60,4 +60,4 @@ const Recipes = db.define('recipes', {
     }
 })
 
-module.exports = Recipes;
+module.exports = Recipes;   
