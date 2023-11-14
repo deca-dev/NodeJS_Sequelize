@@ -2,7 +2,7 @@ const recipeControllers = require( './recipes.controller')
 
 const getAllRecipes = (req, res) => {
     recipeControllers.getAllRecipes()
-        .then(res => {
+        .then(data => {
             res.status(200).json(data)
         })
         .catch(err => {
@@ -80,10 +80,22 @@ const deleteRecipe = (req, res) => {
         })
 }
 
+const getUserRecipes = (req, res) => {
+    const userId = req.user.id;
+    recipeControllers.getMyRecipes(userId)
+    .then(data => {
+        res.status(200).json(data)
+    })
+    .catch(err => {
+        res.status(400).json({message: err.message})
+    })
+}
+
 module.exports =  {
     getAllRecipes,
     getRecipeById,
     createRecipe,
     patchRecipe,
-    deleteRecipe
+    deleteRecipe,
+    getUserRecipes
 }

@@ -9,7 +9,7 @@ const Instructions = db.define('instructions', {
         primaryKey: true
     },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false
     },
     step: {

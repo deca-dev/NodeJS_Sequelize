@@ -15,7 +15,6 @@ const Ingredients = db.define('ingredients', {
      typeId : {
         type: DataTypes.INTEGER,
         allowNull: false,
-        unique: true,
         field: 'type_id',
         references: {
             key: 'id',
@@ -25,7 +24,7 @@ const Ingredients = db.define('ingredients', {
      urlImage: {
         type: DataTypes.STRING,
         validate: {
-            isUrl: true
+            // isUrl: true
         },
         field: 'url_image'
      }
